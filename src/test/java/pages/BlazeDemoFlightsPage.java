@@ -17,4 +17,6 @@ public class BlazeDemoFlightsPage {
    @FindBy(xpath = "//table[@class='table']//td[6]")
     public List<WebElement> prices;
 
+    // Hello world
+
 }
