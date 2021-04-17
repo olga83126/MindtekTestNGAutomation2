@@ -21,7 +21,7 @@ public class StoreAppSignInPage {
     @FindBy(id = "email")
     public WebElement emailSignIn;
 
-    @FindBy(id = "password")
+    @FindBy(id = "passwd")
     public WebElement passwordSignIn;
 
     @FindBy(id = "SubmitLogin")

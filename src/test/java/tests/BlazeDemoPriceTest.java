@@ -17,7 +17,7 @@ public class BlazeDemoPriceTest extends TestBase {
     BlazeDemoFlightsPage blazeDemoFlightsPage = new BlazeDemoFlightsPage();
 
     // This test will verify that all flight prices are below $1000
-    @Test
+    @Test(groups = {"regression","smoke"})
     public void priceTest(){
         driver.get(Configuration.getProperty("BlazeDemoURL"));
         driver.findElement(By.xpath("//input[@type='submit']")).click();

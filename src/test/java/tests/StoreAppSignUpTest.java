@@ -27,7 +27,7 @@ public class StoreAppSignUpTest extends TestBase {
         };
     }
 
-    @Test(dataProvider = "signUpTestData", priority = 1)
+    @Test(dataProvider = "signUpTestData", priority = 1,groups = {"regression","smoke"})
     public void signUpTest(String firstName, String lastName,String password, String day,String month,
                            String year, String address, String city,String state, String postcode, String mobileNumber){
 
@@ -38,7 +38,7 @@ public class StoreAppSignUpTest extends TestBase {
         driver.get(Configuration.getProperty("StoreURL"));
         storeAppHomePage.signInButton.click();
         email=DataUtils.getRandomEmail();
-        storeAppSignInPage.emailInputBox.sendKeys(DataUtils.getRandomEmail());
+        storeAppSignInPage.emailInputBox.sendKeys(email);
         storeAppSignInPage.createAccountButton.click();
         storeAppRegisterPage.firstName.sendKeys(firstName);
         storeAppRegisterPage.lastName.sendKeys(lastName);
@@ -60,7 +60,7 @@ public class StoreAppSignUpTest extends TestBase {
 
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2,groups = {"regression","smoke"})
     public void signInTest(){
         driver.get(Configuration.getProperty("StoreURL"));
         StoreAppHomePage storeAppHomePage = new StoreAppHomePage();

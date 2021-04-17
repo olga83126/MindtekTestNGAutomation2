@@ -23,9 +23,7 @@ public class BlazeDemoTest extends TestBase { // once extend TestBase class, wha
     BlazeDemoHomepage blazeDemoHomepage = new BlazeDemoHomepage();
 
 
-
-
-    @Test
+    @Test(groups = {"regression"})
     public void test(){
         driver.get("BlazeDemoURL");
      //   driver.findElement(By.xpath("//input[@type='submit']")).click();
