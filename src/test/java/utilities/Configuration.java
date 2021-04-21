@@ -12,7 +12,7 @@ private static FileInputStream input;
 
 // What we can write that will make connection once we create an object out of this class
     static {
-        String path = "C:\\Users\\olgak\\IdeaProjects\\MindtekTestNGAutomation\\src\\test\\resources\\configurations\\Configuration.properties";
+        String path = System.getProperty("user.dir")+"\\src\\test\\resources\\configurations\\Configuration.properties";
     try {
         input= new FileInputStream(path);
         properties=new Properties();
